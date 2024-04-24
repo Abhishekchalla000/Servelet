@@ -1,0 +1,44 @@
+package registerServlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class registerServlet
+ */
+public class registerServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public registerServlet() {
+        super();
+    }
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	String x=request.getParameter("fname");
+	String Y=request.getParameter("sname");
+	String res="<!DOCTYPE html>\r\n"
+			+ "<html>\r\n"
+			+ "<head>\r\n"
+			+ "<meta charset=\"ISO-8859-1\">\r\n"
+			+ "<title>Insert title here</title>\r\n"
+			+ "</head>\r\n"
+			+ "<body>\r\n"
+			+ "<h1>Hello world</h1>\r\n"
+			+ "\r\n"
+			+ "</body>\r\n"
+			+ "</html>";
+
+	PrintWriter p=response.getWriter();
+	p.print(res);
+	}
+	
+
+}
